@@ -35,13 +35,23 @@ function App() {
     setTodos(updatedTodos)
 
   }
+  const toggleRemove = (todoId) => {
+    console.log(todoId);
+    const updatedTodos = todos.filter((todo) => {
+      return todo.id !== todoId
+    });
+    setTodos(updatedTodos)
+
+  }
+
+
 
 
 
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Belajar di Progate</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted}  />
+      <Todos todos={todos} toggleCompleted={toggleCompleted} toggleRemove={toggleRemove} />
     </div>
   );
 }
