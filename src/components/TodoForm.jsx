@@ -27,7 +27,7 @@ const TodoForm = ({ addTodo }) => {
                     type="text"
                     placeholder="Add your Todo"
                     style={styles.formInput}
-                    onChange={(event) => {handleChangeTitle(event)}}
+                    onChange={(event) => { handleChangeTitle(event) }}
                     value={title}
 
                 />
@@ -43,13 +43,26 @@ const styles = {
     },
     formInput: {
         height: '66px',
-        width: '40%',
+        width: '450px',
         fontSize: '16px',
         padding: '0 16px',
+        "font-size": "1em",
+        background: "transparent",
+        border: "1px solid #828691",
+        color: '#44c0b6',
+
     },
     button: {
         height: '72px',
         fontSize: '16px',
+        padding: '0.8em',
+        color: '#44c0b6',
+        "font-size": "1em",
+        background: "transparent",
+        border: "1px solid #828691",
+        cursor: "pointer",
+
+
     },
 }
 

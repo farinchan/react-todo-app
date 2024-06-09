@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Todos from './components/Todos';
 import TodoForm from './components/TodoForm'
+import "./App.css";
+
 
 
 const handleClick = () => {
@@ -77,7 +79,9 @@ const styles = {
     padding: '12px',
   },
   title: {
+    color: '#44c0b6',
     fontSize: '36px',
+    'letter-spacing': '0.2rem'
   },
 }
 

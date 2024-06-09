@@ -10,13 +10,13 @@ const TodoItem = ({ todo, toggleCompleted, toggleRemove }) => {
     }
   }
 
-  
+
 
   return (
     <div style={styles.todoItem}>
-      <input type="checkbox" onChange={()=>{toggleCompleted(todo.id)}} style={styles.checkbox} />
+      <input type="checkbox" onChange={() => { toggleCompleted(todo.id) }} style={styles.checkbox} />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
-      <button onClick={()=>{toggleRemove(todo.id)}} style={styles.button}>x</button>
+      <button onClick={() => { toggleRemove(todo.id) }} style={styles.button}>x</button>
     </div>
   )
 }
@@ -29,6 +29,12 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '0 20px',
+    'letter-spacing': '0.02rem',
+    'transition': 'all 0.3s ease-out',
+    'border-left': '5px solid #cf972e',
+    'margin-bottom': '0.5rem',
+    background: "#494847",
+
   },
   checkbox: {
     height: '18px',
