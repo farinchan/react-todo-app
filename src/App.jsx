@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Todos from './components/Todos';
+import TodoForm from './components/TodoForm'
+
 
 const handleClick = () => {
   console.log('Button clicked');
@@ -41,16 +43,29 @@ function App() {
       return todo.id !== todoId
     });
     setTodos(updatedTodos)
-
   }
 
+  const addTodo = (todoTitle) => {
+    if (todoTitle === '') {
+      return
+    }
 
+    const newTodo = {
+      id: todos.length + 1,
+      title: todoTitle,
+      completed: false,
+    }
+
+    const updatedTodos = todos.concat(newTodo)
+    setTodos(updatedTodos)
+  }
 
 
 
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Belajar di Progate</h1>
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} toggleCompleted={toggleCompleted} toggleRemove={toggleRemove} />
     </div>
   );
