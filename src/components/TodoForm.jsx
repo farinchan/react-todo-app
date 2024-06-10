@@ -57,7 +57,6 @@ const styles = {
         fontSize: '16px',
         padding: '0.8em',
         color: '#44c0b6',
-        "font-size": "1em",
         background: "transparent",
         border: "1px solid #828691",
         cursor: "pointer",

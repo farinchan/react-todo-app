@@ -4,7 +4,10 @@ const TodoItem = ({ todo, toggleCompleted, toggleRemove }) => {
   // Definisikan function getTodoTitleStyle di sini
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
-      return { textDecoration: 'line-through' }
+      return { 
+        textDecoration: 'line-through',
+        color: '#828691'
+       }
     } else {
       return { textDecoration: 'none' }
     }

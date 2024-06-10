@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Belajar di Progate</h1>
+      <h1 style={styles.title}>My Todo List</h1>
       <TodoForm addTodo={addTodo} />
       <Todos todos={todos} toggleCompleted={toggleCompleted} toggleRemove={toggleRemove} />
     </div>
@@ -81,7 +81,6 @@ const styles = {
   title: {
     color: '#44c0b6',
     fontSize: '36px',
-    'letter-spacing': '0.2rem'
   },
 }
 
